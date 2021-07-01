@@ -1,7 +1,7 @@
 import requests,json
 from bs4 import BeautifulSoup
 
-sitemap = open(r'C:\Users\Shubham\Documents\sitemap925.txt', 'r')
+sitemap = open(r'sitemap925.txt', 'r')
 
 for io in sitemap.readlines():
 	reqs = requests.get((io).replace('\n',''))
