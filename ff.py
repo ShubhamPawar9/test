@@ -20,8 +20,9 @@ for io in sitemap.readlines():
 			
 				if 'premium_price' in y:
 					value = y['available']
-					print(f'{domain}: {value}')
-					okl.append(f'{domain}: {value}')
+					if value == 'true':
+						print(f'{domain}: {value}')
+						okl.append(f'{domain}: {value}')
 				else:
 					pass
 	print('Available ones:')
