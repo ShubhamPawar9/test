@@ -1,6 +1,8 @@
 import requests,json
 from bs4 import BeautifulSoup
 
+
+okl = []
 sitemap = open(r'sitemap925.txt', 'r')
 
 for io in sitemap.readlines():
@@ -19,7 +21,10 @@ for io in sitemap.readlines():
 				if 'premium_price' in y:
 					value = y['available']
 					print(f'{domain}: {value}')
+					okl.append(f'{domain}: {value}')
 				else:
 					pass
+	print('Available ones:')
+	print(okl)
 #	if '9to5mac.com' not in  link:
 #		print(link.get('href'))
