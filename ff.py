@@ -25,15 +25,18 @@ def task():
   }
 		mhead['x-auth-id-token-v2'] = toks
 
-		m = requests.post('https://qtalk.in/sessions/v1/open?shouldFetchOpenMetadata=true',headers=mhead,json={"collageId":"zFKI","webId":f"ec76d3097b7927eb62cc8e{''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(10))}","browserName":"Chrome","uuid":"ef79062b-6b97-460a-b833-75{''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(10))}"})
+		m = requests.post('https://qtalk.in/sessions/v1/open?shouldFetchOpenMetadata=true',headers=mhead,json={"collageId":"xNwU","webId":f"ec76d3097b7927eb62cc8e{''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(10))}","browserName":"Chrome","uuid":"ef79062b-6b97-460a-b833-75{''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(10))}"})
 		print('Done')
 	except:
 		pass
-	
+
+tok = 0	
 while True:
 	try:
 		task()
-		time.sleep(random.randint(0,7))
+		tok+=1
+		print(f'[+] Completed {tok}')
+		time.sleep(random.randint(4,10))
 	except():
 		print('error')
 		pass
