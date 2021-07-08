@@ -33,7 +33,7 @@ def task():
 while True:
 	try:
 		task()
-		#time.sleep(random.randint(4,10))
+		time.sleep(random.randint(0,4))
 	except():
 		print('error')
 		pass
